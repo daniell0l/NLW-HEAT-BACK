@@ -12,7 +12,7 @@ const authenticateUserController = new AuthenticateUserController();
 router.post("/authenticate", authenticateUserController.handle);
 router.post("/messages", ensureAuthenticated, new CreateMessageController().handle)
 
-router.get("/messages/lest3", new GetLast3MessageController().hendle)
+router.get("/messages/last3", new GetLast3MessageController().handle)
 router.get("/profile", ensureAuthenticated, new ProfileUserController().handle);
 
 export { router };
